@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - service.yaml
+
+# Kargo updates the tag below with the kustomize-set-image promotion step.
+images:
+  - name: nginx
+    newTag: 1.31.10
+
+# The generated ConfigMap name gets a content hash suffix by default, so a change
+# to any file in html/ renames the ConfigMap and rolls the Deployment.
+configMapGenerator:
+  - name: site
+    files:
+      - html/index.html
+      - html/about.html
+      - html/style.css

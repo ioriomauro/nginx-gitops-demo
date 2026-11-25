@@ -1,0 +1,70 @@
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1e3a5f 0%, var(--bg) 60%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header { background: rgba(15, 23, 42, 0.8); border-bottom: 1px solid #334155; }
+
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a.active { color: var(--accent); }
+nav .brand { color: var(--text); font-weight: 700; margin-right: auto; }
+
+main { flex: 1; max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; width: 100%; }
+
+.hero h1 { font-size: 2.25rem; margin: 0 0 1rem; }
+.hero p { color: var(--muted); max-width: 40rem; }
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent) !important;
+  font-size: 0.875rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+article {
+  background: var(--panel);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+article h2 { margin-top: 0; font-size: 1.1rem; color: var(--accent); }
+article p { margin-bottom: 0; color: var(--muted); }
+
+code { background: #0b1220; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+
+footer { text-align: center; padding: 1.5rem; color: var(--muted); font-size: 0.875rem; }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - nginx-gitops-demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="index.html">nginx-gitops-demo</a>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>About this lab</h1>
+      <p>A small, public repository used to practise GitOps promotion with Argo CD and Kargo.</p>
+    </section>
+    <section class="cards">
+      <article>
+        <h2>Source of truth</h2>
+        <p><code>main</code> holds the Kustomize sources. The <code>stage/*</code> branches hold the rendered manifests that Argo CD deploys.</p>
+      </article>
+      <article>
+        <h2>What Kargo watches</h2>
+        <p>The public nginx image on Docker Hub and the files under <code>base/html/</code>.</p>
+      </article>
+    </section>
+  </main>
+  <footer>Local lab on Docker Desktop Kubernetes</footer>
+</body>
+</html>
