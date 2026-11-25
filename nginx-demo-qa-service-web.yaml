@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: web
+  name: web
+  namespace: nginx-demo-qa
+spec:
+  ports:
+  - name: http
+    port: 8082
+    targetPort: http
+  selector:
+    app.kubernetes.io/name: web
+  type: LoadBalancer
