@@ -37,5 +37,5 @@ spec:
           readOnly: true
       volumes:
       - configMap:
-          name: site-5gg95tmgmk
+          name: site-7g9kbkkhgm
         name: site
